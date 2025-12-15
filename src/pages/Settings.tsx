@@ -7,7 +7,6 @@ import { ThemeSettings } from '../components/Settings/Theme'
 import { SoundSettings } from '../components/Settings/Sound'
 import { EmojiSettings } from '../components/Settings/Emoji'
 import { MediaSettings } from '../components/Settings/Media'
-import { LoginQR } from '../components/Settings/LoginQR'
 import { APSettings } from '../components/Settings/APSettings'
 import { IdentitySettings } from '../components/Settings/Identity'
 import { BreadcrumbList } from '../components/ui/BreadcrumbList'
@@ -25,7 +24,6 @@ const pathTitles: Record<string, string> = {
     '/settings/emoji': 'settings.emoji.title',
     '/settings/storage': 'settings.media.title',
     '/settings/activitypub': 'settings.ap.title',
-    '/settings/loginqr': 'settings.qr.title',
     '/settings/importexport': 'settings.importexport.title',
     '/settings/jobs': 'settings.jobs.title'
 }
@@ -60,7 +58,6 @@ export function Settings(): JSX.Element {
                     <Route path="/emoji" element={<EmojiSettings />} />
                     <Route path="/storage" element={<MediaSettings />} />
                     <Route path="/activitypub" element={<APSettings />} />
-                    <Route path="/loginqr" element={<LoginQR />} />
                     <Route path="/jobs" element={<Jobs />} />
                     <Route path="/importexport/:tab" element={<ImportExport />} />
                 </Routes>
