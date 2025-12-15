@@ -6,7 +6,6 @@ import { type Message, type ReplyMessageSchema, type MarkdownMessageSchema } fro
 
 import MoreHorizIcon from '@mui/icons-material/MoreHoriz'
 import { useClient } from '../../context/ClientContext'
-import { ConcordBadge } from '../ui/Badge'
 import LockIcon from '@mui/icons-material/Lock'
 import { CCUserChip } from '../ui/CCUserChip'
 import { FaTheaterMasks } from 'react-icons/fa'
@@ -82,16 +81,6 @@ export const MessageHeader = (props: MessageHeaderProps): JSX.Element => {
                         />
                     </Tooltip>
                 )}
-                {props.message.authorUser?.profile?.badges?.map((badge, i) => (
-                    <ConcordBadge
-                        key={i}
-                        badgeRef={badge}
-                        sx={{
-                            height: '0.9rem',
-                            borderRadius: 0.5
-                        }}
-                    />
-                ))}
                 {props.message.authorUser?.alias && (
                     <Typography
                         component="span"

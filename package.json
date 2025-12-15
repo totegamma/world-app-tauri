@@ -19,9 +19,6 @@
     "@aws-sdk/s3-request-presigner": "^3.592.0",
     "@concrnt/cfm": "^0.0.0",
     "@concrnt/worldlib": "^0.2.0",
-    "@cosmjs/encoding": "^0.32.4",
-    "@cosmjs/proto-signing": "^0.32.4",
-    "@cosmjs/stargate": "^0.32.4",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.0",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
@@ -36,7 +33,6 @@
     "@types/dom-chromium-ai": "^0.0.9",
     "blurhash": "^2.0.5",
     "boring-avatars": "^1.11.2",
-    "cosmjs-types": "^0.9.0",
     "elliptic": "^6.5.4",
     "ethers": "^6.3.0",
     "exifreader": "^4.26.2",
@@ -73,7 +69,6 @@
     "virtua": "^0.33.5"
   },
   "devDependencies": {
-    "@keplr-wallet/types": "^0.12.114",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.26",
     "@vitejs/plugin-react": "^4.6.0",

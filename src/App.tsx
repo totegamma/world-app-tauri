@@ -2,7 +2,6 @@ import { useEffect, useRef, Suspense, lazy, useState } from 'react'
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom'
 import { darken, Box, Paper, Typography, Modal, useTheme, Button } from '@mui/material'
 import { SnackbarProvider, closeSnackbar, enqueueSnackbar } from 'notistack'
-import { ConcordProvider } from './context/ConcordContext'
 
 import { Menu } from './components/Menu/Menu'
 import { Explorer, Notifications, Settings, TimelinePage, EntityPage, MessagePage, ListPage, Devtool } from './pages'
@@ -27,7 +26,6 @@ import { ExplorerPlusPage } from './pages/ExplorerPlus'
 import { UseSoundFormats } from './constants'
 import { useGlobalState } from './context/GlobalState'
 import { ConcrntLogo } from './components/theming/ConcrntLogo'
-import { ConcordPage } from './pages/Concord'
 import { EditorModalProvider } from './components/EditorModal'
 import { MediaViewerProvider } from './context/MediaViewer'
 import { Tutorial } from './pages/Tutorial'
@@ -341,7 +339,6 @@ function App(): JSX.Element {
                     <MediaViewerProvider>
                         <EmojiPickerProvider>
                             <StorageProvider>
-                                <ConcordProvider>
                                     <EditorModalProvider>
                                         <TimelineDrawerProvider>
                                             <UserDrawerProvider>
@@ -363,7 +360,6 @@ function App(): JSX.Element {
                                             </UserDrawerProvider>
                                         </TimelineDrawerProvider>
                                     </EditorModalProvider>
-                                </ConcordProvider>
                             </StorageProvider>
                         </EmojiPickerProvider>
                     </MediaViewerProvider>
@@ -524,7 +520,6 @@ function App(): JSX.Element {
                                 <Route path="/ap/:id" element={<ApUserPage />} />
                                 <Route path="/devtool" element={<Devtool />} />
                                 <Route path="/subscriptions" element={<ManageSubsPage />} />
-                                <Route path="/concord/*" element={<ConcordPage />} />
                                 <Route path="/tutorial" element={<Tutorial />} />
                                 <Route path="/deck" element={<DeckPage />} />
                             </Routes>

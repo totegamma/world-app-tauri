@@ -23,15 +23,6 @@ importers:
       '@concrnt/worldlib':
         specifier: ^0.2.0
         version: 0.2.0
-      '@cosmjs/encoding':
-        specifier: ^0.32.4
-        version: 0.32.4
-      '@cosmjs/proto-signing':
-        specifier: ^0.32.4
-        version: 0.32.4
-      '@cosmjs/stargate':
-        specifier: ^0.32.4
-        version: 0.32.4
       '@emotion/react':
         specifier: ^11.14.0
         version: 11.14.0(@types/react@18.0.26)(react@18.3.1)
@@ -80,9 +71,6 @@ importers:
       boring-avatars:
         specifier: ^1.11.2
         version: 1.11.2
-      cosmjs-types:
-        specifier: ^0.9.0
-        version: 0.9.0
       elliptic:
         specifier: ^6.5.4
         version: 6.6.1
@@ -192,9 +180,6 @@ importers:
         specifier: ^0.33.5
         version: 0.33.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
     devDependencies:
-      '@keplr-wallet/types':
-        specifier: ^0.12.114
-        version: 0.12.114
       '@tauri-apps/cli':
         specifier: ^2
         version: 2.9.6
