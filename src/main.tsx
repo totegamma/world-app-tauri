@@ -11,7 +11,6 @@ import { ClientProvider } from './context/ClientContext'
 import { HelmetProvider } from 'react-helmet-async'
 
 import './i18n'
-import { GA4Provider } from './context/GA4'
 import { ConcrntThemeProvider } from './context/Theme'
 import AuthorizePage from './pages/Authorize'
 import { SnackbarProvider } from 'notistack'
@@ -61,9 +60,7 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
                         <Route
                             path="/welcome"
                             element={
-                                <GA4Provider tag={tag}>
                                     <Welcome />
-                                </GA4Provider>
                             }
                         />
                         <Route
@@ -79,17 +76,13 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
                                 <Route
                                     path="/register"
                                     element={
-                                        <GA4Provider tag={tag}>
                                             <Registration />
-                                        </GA4Provider>
                                     }
                                 />
                                 <Route
                                     path="/invitation"
                                     element={
-                                        <GA4Provider tag={tag}>
                                             <Invitation />
-                                        </GA4Provider>
                                     }
                                 />
                             </>
@@ -102,11 +95,9 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
                         <Route
                             path="/import"
                             element={
-                                <GA4Provider tag={tag}>
                                     <SnackbarProvider preventDuplicate>
                                         <AccountImport />
                                     </SnackbarProvider>
-                                </GA4Provider>
                             }
                         />
                         {!logined && (
@@ -114,33 +105,25 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
                                 <Route
                                     path="/:id"
                                     element={
-                                        <GA4Provider tag={tag}>
                                             <GuestProfilePage />
-                                        </GA4Provider>
                                     }
                                 />
                                 <Route
                                     path="/:id/profile/:profileid"
                                     element={
-                                        <GA4Provider tag={tag}>
                                             <GuestProfilePage />
-                                        </GA4Provider>
                                     }
                                 />
                                 <Route
                                     path="/:authorID/:messageID"
                                     element={
-                                        <GA4Provider tag={tag}>
                                             <GuestMessagePage />
-                                        </GA4Provider>
                                     }
                                 />
                                 <Route
                                     path="/timeline/:id"
                                     element={
-                                        <GA4Provider tag={tag}>
                                             <GuestTimelinePage />
-                                        </GA4Provider>
                                     }
                                 />
                             </>
@@ -148,7 +131,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
                         <Route
                             path="*"
                             element={
-                                <GA4Provider tag={tag}>
                                     <LoginGuard
                                         component={
                                             <ClientProvider>
@@ -163,7 +145,6 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
                                         }
                                         redirect="/welcome"
                                     />
-                                </GA4Provider>
                             }
                         />
                     </Routes>
